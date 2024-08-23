@@ -99,6 +99,7 @@ while true; do
 	echo "TAKING_ACTION at \$(date +%Y-%m-%dT%T) (check #\${checks})"
 	checks=0  # reset counter
 	am force-stop com.nianticlabs.pokemongo
+ 	am force-stop com.sy1vi3.cosmog && killall com.sy1vi3.cosmog
 	monkey -p "\$mitm" 1
 	echo "PAUSE_CHECKS at \$(date +%Y-%m-%dT%T)"
 	sleep "$cooldown"  # give mitm a bit of time to get up
